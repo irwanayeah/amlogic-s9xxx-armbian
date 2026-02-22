@@ -391,15 +391,17 @@ jobs:
           build_target: armbian
           armbian_path: build/output/images/*.img.gz
           armbian_board: s905x-b860h
-          armbian_kernel: 5.10.123
+          # GANTI VERSI INI:
+          armbian_kernel: 5.10.160
           auto_kernel: false
           kernel_repo: ophub/kernel
-          kernel_usage: stable
+          # GANTI KE FLIPPY:
+          kernel_usage: flippy
           armbian_fstype: ext4
           builder_name: irwanayeah
-          # Tambahkan baris ini jika ada untuk memaksa versi OS
           armbian_release: bullseye
           armbian_version: 22.08.0
+
 
       - name: Upload Rebuild image to Release
         uses: ncipollo/release-action@main
